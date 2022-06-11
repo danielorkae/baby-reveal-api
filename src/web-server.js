@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const webServer = () => {
     const listen = (app) => {
-        app.listen(3000, () => {
+        app.listen(process.env.PORT, () => {
             console.log('app listening on port 3000!')
         })
     }
