@@ -1,6 +1,7 @@
 const express = require('express')
 const routes = require('./routes')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const webServer = () => {
     const listen = (app) => {
@@ -15,6 +16,7 @@ const webServer = () => {
 
     const registerMiddlewares = (app) => {
         app.use(bodyParser.json())
+        app.use(cors())
     }
 
     const init = () => {
